@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<link rel="manifest" href="images/favicon.ico/site.webmanifest">
+		<link rel="mask-icon" href="images/favicon.ico/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		
+		<title>javascript oefening</title>
+
+        
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  	</head>
+	<body>
+    
+<div id="Result"></div> 
+	</body>
+    <script type="text/javascript">
+        
+        var d=new Date();
+        m=d.getMonth()-1;
+        y=d.getFullYear();
+        
+        var aDagen=new Array();
+        aDagen[0]="zondag";
+        aDagen[1]="maandag";
+        aDagen[2]="dinsdag";
+        aDagen[3]="woensdag";
+        aDagen[4]="donderdag";
+        aDagen[5]="vrijdag";
+        aDagen[6]="zaterdag";
+        
+        var aMaxDagen=new Array();
+        aMaxDagen[0]=31;
+        aMaxDagen[1]=29;
+        aMaxDagen[2]=31;
+        aMaxDagen[3]=30;
+        aMaxDagen[4]=31;
+        aMaxDagen[5]=30;
+        aMaxDagen[6]=31;
+        aMaxDagen[7]=31;
+        aMaxDagen[8]=30;
+        aMaxDagen[9]=31;
+        aMaxDagen[10]=30;
+        aMaxDagen[11]=31;
+        
+        for (var i=1; i<aMaxDagen[m]; i++){
+            var curDate = new Date(y, m+1, i);
+            var dag = curDate.getDay();
+            document.write(aDagen[dag] + " "+i+"/"+m +y+"<br>");
+        }
+        
+        </script>  
+</html>
